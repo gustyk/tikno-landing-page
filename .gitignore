@@ -38,3 +38,8 @@ Thumbs.db
 *.tsbuildinfo
 next-env.d.ts
 .vercel
+
+# Local-only — not needed for Vercel deployment
+README.md
+scripts/
+.env.example
