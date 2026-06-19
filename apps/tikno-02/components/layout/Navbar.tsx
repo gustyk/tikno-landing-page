@@ -1,55 +1,47 @@
-'use client';
-
-const navLinks = [
+const links = [
+  { label: 'Tentang', href: '#about' },
   { label: 'Layanan', href: '#services' },
   { label: 'Proses', href: '#process' },
-  { label: 'Cakupan', href: '#coverage' },
-  { label: 'Standar', href: '#standards' },
   { label: 'Harga', href: '#pricing' },
 ];
 
 export function Navbar() {
   return (
-    <nav className="fixed top-0 left-0 right-0 z-50 border-b border-white/10 bg-gray-950/80 backdrop-blur-xl">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex items-center justify-between h-16">
-          <div className="flex items-center gap-2">
-            <div className="w-8 h-8 rounded-lg bg-gradient-to-br from-blue-500 to-cyan-400 flex items-center justify-center text-sm font-bold text-white">
-              I
-            </div>
-            <span className="font-semibold text-lg tracking-tight">
-              ISO<span className="text-blue-400">Consult</span>
-            </span>
+    <header className="fixed top-0 inset-x-0 z-50 bg-white/90 backdrop-blur-md border-b border-stone-200/60">
+      <nav className="max-w-6xl mx-auto px-6 h-16 lg:h-[72px] flex items-center justify-between">
+        <a href="#" className="flex items-center gap-2.5">
+          <div className="w-8 h-8 rounded-md bg-[#1B2A4A] flex items-center justify-center">
+            <span className="text-white font-serif text-sm font-bold leading-none">Q</span>
           </div>
+          <span className="font-serif text-lg text-[#1B2A4A]">
+            QMS<span className="text-[#C9A84C]">Consult</span>
+          </span>
+        </a>
 
-          <div className="hidden md:flex items-center gap-8">
-            {navLinks.map((link) => (
-              <a
-                key={link.href}
-                href={link.href}
-                className="text-sm text-gray-400 hover:text-white transition-colors"
-              >
-                {link.label}
-              </a>
-            ))}
-          </div>
-
-          <div className="flex items-center gap-3">
+        <div className="hidden md:flex items-center gap-8">
+          {links.map((l) => (
             <a
-              href="#pricing"
-              className="hidden sm:inline-flex text-sm text-gray-400 hover:text-white transition-colors"
+              key={l.href}
+              href={l.href}
+              className="text-[13px] font-medium text-stone-500 hover:text-stone-900 transition-colors tracking-wide uppercase"
             >
-              Masuk
+              {l.label}
             </a>
-            <a
-              href="#cta"
-              className="inline-flex items-center px-4 py-2 rounded-lg text-sm font-medium bg-blue-600 text-white hover:bg-blue-500 transition-colors glow-sm"
-            >
-              Konsultasi Gratis
-            </a>
-          </div>
+          ))}
         </div>
-      </div>
-    </nav>
+
+        <div className="flex items-center gap-4">
+          <a href="#contact" className="hidden sm:inline-flex text-[13px] font-medium text-stone-600 hover:text-stone-900 transition-colors">
+            Hubungi Kami
+          </a>
+          <a
+            href="#contact"
+            className="inline-flex items-center px-5 py-2.5 rounded-md text-[13px] font-semibold bg-[#1B2A4A] text-white hover:bg-[#1B2A4A]/90 transition-colors tracking-wide uppercase"
+          >
+            Konsultasi Gratis
+          </a>
+        </div>
+      </nav>
+    </header>
   );
 }

@@ -3,12 +3,12 @@ import type { ReactNode } from 'react';
 import './globals.css';
 
 export const metadata: Metadata = {
-  title: 'ISO 9001:2015 Consulting | Sertifikasi & Implementasi Profesional',
+  title: 'QMSConsult — Konsultan ISO 9001:2015',
   description:
-    'Konsultan ISO 9001:2015 profesional. Kami membantu perusahaan Anda meraih sertifikasi QMS dengan proses yang terstruktur, dokumentasi lengkap, dan pendampingan hingga lulus audit.',
+    'Konsultan ISO 9001:2015 profesional. Pendampingan implementasi Quality Management System hingga sertifikasi untuk perusahaan di seluruh Indonesia.',
   openGraph: {
-    title: 'ISO 9001:2015 Consulting',
-    description: 'Konsultan ISO 9001:2015 profesional untuk sertifikasi QMS perusahaan Anda',
+    title: 'QMSConsult — Konsultan ISO 9001:2015',
+    description: 'Konsultan ISO 9001:2015 profesional untuk sertifikasi QMS perusahaan Anda.',
     type: 'website',
   },
 };
@@ -16,7 +16,7 @@ export const metadata: Metadata = {
 export default function RootLayout({ children }: { children: ReactNode }) {
   return (
     <html lang="id">
-      <body className="antialiased bg-gray-950 text-white">{children}</body>
+      <body>{children}</body>
     </html>
   );
 }
