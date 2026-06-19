@@ -2,6 +2,9 @@
 
 import { FadeIn } from '@/components/ui/FadeIn';
 import { FloatingElement } from '@/components/ui/FloatingElement';
+import { CrayonUnderline } from '@/components/ui/CrayonUnderline';
+import { DoodleBackground } from '@/components/ui/DoodleBackground';
+import { Sparkle } from '@/components/ui/Sparkle';
 import { Trophy, Medal, Award } from 'lucide-react';
 
 const achievements = [
@@ -52,24 +55,30 @@ const achievements = [
 export function AchievementsSection() {
   return (
     <section id="prestasi" className="relative py-20 md:py-28 bg-white overflow-hidden">
+      <DoodleBackground className="opacity-80" />
+
       <FloatingElement className="absolute top-10 left-10 opacity-10" duration={5}>
         <img src="https://kbtkit-alibrahgresik.sch.id/wp-content/uploads/2024/05/love.png" alt="" className="w-16 h-16" />
       </FloatingElement>
 
-      <div className="max-w-7xl mx-auto px-6 md:px-10 lg:px-16">
+      <Sparkle color="#FFE66D" size={14} className="absolute top-24 right-20 z-10" delay={0} />
+      <Sparkle color="#F39F5F" size={16} className="absolute bottom-32 left-10 z-10" delay={0.5} />
+
+      <div className="max-w-7xl mx-auto px-6 md:px-10 lg:px-16 relative z-10">
         <div className="text-center mb-16">
           <FadeIn>
-            <span className="inline-block bg-sun/30 text-amber-700 px-4 py-1.5 rounded-full text-sm font-semibold mb-4 font-heading">
+            <span className="inline-block bg-sun/30 text-amber-700 px-4 py-1.5 rounded-full text-sm font-semibold mb-4 font-heading animate-float-slow">
               Prestasi Siswa & Ustadzah
             </span>
           </FadeIn>
           <FadeIn delay={0.1}>
-            <h2 className="font-heading font-bold text-3xl md:text-4xl text-dark leading-tight mb-4">
-              Menginspirasi, Mengukir
-              <br />
-              <span className="text-primary">Capaian Gemilang</span>
+            <h2 className="font-heading font-bold text-3xl md:text-4xl text-dark leading-tight mb-3">
+              Menginspirasi, Mengukir<br /><span className="text-primary">Capaian Gemilang</span>
             </h2>
           </FadeIn>
+          <div className="flex justify-center">
+            <CrayonUnderline color="#FFE66D" variant="zigzag" width="200px" />
+          </div>
         </div>
 
         <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
@@ -77,12 +86,8 @@ export function AchievementsSection() {
             <FadeIn key={a.name} delay={i * 0.08}>
               <div className="group bg-white rounded-2xl shadow-md hover:shadow-xl transition-all duration-300 overflow-hidden border border-gray-100 hover:-translate-y-1">
                 <div className="relative h-56 overflow-hidden">
-                  <img
-                    src={a.img}
-                    alt={a.name}
-                    className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
-                  />
-                  <div className={`absolute top-3 right-3 ${a.color} p-2 rounded-full`}>
+                  <img src={a.img} alt={a.name} className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" />
+                  <div className={`absolute top-3 right-3 ${a.color} p-2 rounded-full group-hover:animate-wiggle`}>
                     {a.icon}
                   </div>
                 </div>

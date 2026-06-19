@@ -2,10 +2,13 @@
 
 import { FadeIn } from '@/components/ui/FadeIn';
 import { MapPin, Mail, Phone, Globe } from 'lucide-react';
+import { CrayonDivider } from '@/components/ui/CrayonDivider';
 
 export function Footer() {
   return (
     <footer className="bg-dark text-white">
+      <CrayonDivider color="#F39F5F" bgColor="#2D2D2D" variant="scribble" />
+
       <div className="max-w-7xl mx-auto px-6 md:px-10 lg:px-16 py-16">
         <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-10">
           <FadeIn>

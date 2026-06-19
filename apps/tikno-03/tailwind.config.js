@@ -90,6 +90,9 @@ const config = {
         'float-slower': 'float 7s ease-in-out infinite',
         'wiggle': 'wiggle 1s ease-in-out infinite',
         'bounce-slow': 'bounce 2s ease-in-out infinite',
+        'scribble': 'scribble 3s ease-in-out infinite',
+        'sparkle': 'sparkle 2s ease-in-out infinite',
+        'color-shift': 'colorShift 4s ease-in-out infinite',
       },
       keyframes: {
         float: {
@@ -99,6 +102,21 @@ const config = {
         wiggle: {
           '0%, 100%': { transform: 'rotate(-3deg)' },
           '50%': { transform: 'rotate(3deg)' },
+        },
+        scribble: {
+          '0%, 100%': { transform: 'rotate(-1deg)' },
+          '25%': { transform: 'rotate(1deg)' },
+          '50%': { transform: 'rotate(-0.5deg)' },
+          '75%': { transform: 'rotate(0.5deg)' },
+        },
+        sparkle: {
+          '0%, 100%': { transform: 'scale(0) rotate(0deg)', opacity: '0' },
+          '50%': { transform: 'scale(1) rotate(180deg)', opacity: '1' },
+        },
+        colorShift: {
+          '0%': { filter: 'hue-rotate(0deg)' },
+          '50%': { filter: 'hue-rotate(15deg)' },
+          '100%': { filter: 'hue-rotate(0deg)' },
         },
       },
     },
