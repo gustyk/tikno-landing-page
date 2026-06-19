@@ -1,17 +1,17 @@
 import { HeroSection } from '@/components/sections/HeroSection';
-import { FeaturesSection } from '@/components/sections/FeaturesSection';
-import { PricingSection } from '@/components/sections/PricingSection';
-import { CTASection } from '@/components/sections/CTASection';
-import { Footer } from '@/components/sections/Footer';
+import { MarqueeSection } from '@/components/sections/MarqueeSection';
+import { AboutSection } from '@/components/sections/AboutSection';
+import { ServicesSection } from '@/components/sections/ServicesSection';
+import { ProjectsSection } from '@/components/sections/ProjectsSection';
 
 export default function HomePage() {
   return (
     <>
       <HeroSection />
-      <FeaturesSection />
-      <PricingSection />
-      <CTASection />
-      <Footer />
+      <MarqueeSection />
+      <AboutSection />
+      <ServicesSection />
+      <ProjectsSection />
     </>
   );
 }

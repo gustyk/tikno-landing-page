@@ -1,6 +1,4 @@
 /** @type {import('next').NextConfig} */
-const nextConfig = {
-  transpilePackages: ['@tikno/ui', '@tikno/utils'],
-};
+const nextConfig = {};
 
 export default nextConfig;
